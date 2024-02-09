@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAPANIZZ</title>
+</head>
+<body>
+<form method="post" style="position: fixed; top: 11%; left:27.25% ; height: 48.5%; width: 45.5%; border-radius: 20px; background-color: #8FAADC;">
+    {% csrf_token %}
+    <input type="text" id="username" name="username" style="position: absolute; top: 9.5%; right:4.5%; height: 17.5%; width: 58.75%; border-radius: 15px; border-style: none; font-size: 1.5vw; padding-left: 25px;">
+    <label for="username" style="position: absolute; top:9.5%; left:4.5% ; height:17.5%; width:30.25%; border-radius: 15px; background-color:#00B0F0; display: flex; justify-content: flex-start; align-items: center; padding-left: 10px; font-family: Arial; color: white; font-size: 1.5vw;">Username:</label>
+    <input type="password" id="password" name="password" style="position: absolute; top: 36.5%; right: 4.5%; height: 17.5%; width: 58.75%; border-radius: 15px; border-style: none; font-size: 1.5vw; padding-left: 25px;">
+    <label for="password" style="position: absolute; top:36.5%; left:4.5%; height:17.5%; width:30.25%; border-radius: 15px; background-color:#00B0F0; display: flex; justify-content: flex-start; align-items: center; padding-left: 10px; font-family: Arial; color: white; font-size: 1.5vw;">Password:</label>
+    <input type="submit" value="Submit" style="position: absolute; top: 63.5%; left:34.875%; height: 17.5%; width: 30.25%; border-radius: 15px;border-style: none; background-color:#00B0F0; font-family: Arial; color: white; font-size: 1.5vw;">
+</form>
+<a href="../register" style="position: fixed; top: 68.5%; left: 47%; height: 8.45%; width: 25%; border-radius: 15px; text-decoration: none; background-color: #5C9CD6; display: flex; justify-content: center; align-items: center; font-family: Arial; color: white; font-size: 1.5vw;">Create New Account</a>
+<a href="/forgotpassword" style="position: fixed; top: 68.5%; left: 28%; height: 8.45%; width: 22%; border-radius: 15px; text-decoration: none; background-color: #00B0F0; display: flex; justify-content: center; align-items: center; font-family: Arial; color: white; font-size: 1.5vw;">Forgot Password</a>
+<p style="position: fixed; top: 80%; left: 50%; transform: translateX(-50%); color: #ff0707d0; font-size: 1.5vw;">{{ message }}</p>
+
+</body>
+</html>

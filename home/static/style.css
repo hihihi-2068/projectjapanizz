@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+  }
+  
+  .container div {
+    flex: 1;
+    border: 1px solid black;
+    padding: 10px;
+  }
+.navbar-button {
+  position: fixed;
+  height: 7%;
+  width: 15%;
+  left: 1.75%;
+  border-radius: 10px;
+}
+
+.navbar-button:hover {
+  background-color: #f7f7f7c0;
+}
+
+.selected-navbar-button {
+  background-color: #DAE3F3;
+  border-style: solid;
+  border-color: #9DC3E6;
+  border-width: 2px;
+}

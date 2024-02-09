@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css'  %}">
+</head>
+<body>
+    <div style="position: fixed; border-left: 2px solid #E7E6E6; left: 18.5%; top: 0%; height: 100%;"></div>
+    <div id="home_icon"  style="position: fixed; top: 8.2%; left: 2,54%; height: 8.5%; width: 14.25%;">
+        <a href="../home" style="position: absolute; color: #00B0F0; font-family: Arial, Helvetica, sans-serif; font-size: 2.25vw; font-weight: bold; left: 50%; transform: translate(-50%,-50%); text-decoration: none;" >
+            JAPANIZZ
+        </a>
+    </div>
+   <!-- learn button -->
+<a href="../home">
+    <div id="learn_button" class="navbar-button {% block learn_button %}{% endblock %}" style="top: 21.5%;">
+        <img src="../static/home.svg" alt="home icon" style="max-width: 20%; position: absolute; transform: rotateY(-50%,-50%);">
+        <span style="position: absolute; font-size: 2vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bold; color: #404040;  top: 50%; left:25%; transform: translateY(-50%); text-decoration: none;">
+            learn
+        </span>
+    </div>
+</a>
+<!-- charactor button -->
+<a href="../characters">
+    <div id="characters_button" class="navbar-button {% block characters_button %}{% endblock %}" style="top: 34%;" >
+        <span style="position: absolute; font-size: 2vw; font-family: 'Yu Gothic'; font-weight: bold; color: #29A8D5; top: 50%; left: 2%; transform: translateY(-50%); text-decoration: none;" >
+            あ
+        </span>
+        <span style="position: absolute; font-size: 2vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bold; color: #404040;  top: 50%; left:25%; transform: translateY(-50%); text-decoration: none;">
+            characters
+        </span>
+    </div>
+</a>
+<!-- kanji button -->
+<a href="../kanji">
+    <div id="kanji_button" class="navbar-button {% block kanji_button %}{% endblock %}" style="top: 46.5%;" >
+        <span style="position: absolute; font-size: 2vw; font-family: 'Yu Gothic'; font-weight: bold; color: #29A8D5; top: 50%; left: 2%; transform: translateY(-50%); text-decoration: none;" >
+            人
+        </span>
+        <span style="position: absolute; font-size: 2vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bold; color: #404040;  top: 50%; left:25%; transform: translateY(-50%); text-decoration: none;">
+            kanji
+        </span>
+    </div>
+</a>
+<!-- vocabulary button -->
+<a href="../vocabulary">
+    <div id="vocabulary_button" class="navbar-button {% block vocabulary_button %}{% endblock %}" style="top: 59%;">
+        <img src="{% static 'vocabulary.svg' %}" alt="vocabulary icon" style="max-width: 20%; position: absolute;">
+        <span style="position: absolute; font-size: 2vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bold; color: #404040;  top: 50%; left:25%; transform: translateY(-50%); text-decoration: none;">
+            vocabulary
+        </span>
+    </div>
+</a>
+<!-- gramar button -->
+<a href="../gramar">
+    <div id="gramar_button" class="navbar-button {% block gramar_button %}{% endblock %}" style="top: 71.5%;">
+        <img src="{% static 'vocabulary.svg' %}" alt="gramar icon" style="max-width: 20%; position: absolute;">
+        <span style="position: absolute; font-size: 2vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bold; color: #404040;  top: 50%; left:25%; transform: translateY(-50%); text-decoration: none;">
+            gramar
+        </span>
+    </div>
+</a>
+<!-- account button -->
+<a href="../account">
+    <div id="account_button" class="navbar-button {% block account_button %}{% endblock %}" style="top: 84%;">
+        <img src="{% static 'account.svg'%}" alt="account icon" style="max-width: 20%; position: absolute;">
+        <span style="position: absolute; font-size: 2vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bold; color: #404040;  top: 50%; left:25%; transform: translateY(-50%); text-decoration: none;">
+            account
+        </span>
+    </div>
+</a>
+{% block content %}
+{% endblock %}
+    
+    <script src="{% static 'main.js' %}"></script>
+</body>
+</html>

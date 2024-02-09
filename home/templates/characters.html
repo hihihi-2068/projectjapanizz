@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{% block title %}
+JAPANIZZ
+{% endblock %}
+
+{% block characters_button %}selected-navbar-button{% endblock %}
+
+{% block content %}
+{% load static %}
+
+
+<style>
+    .characters-div {
+        background-color: #DAE3F3;
+        border-radius: 10px;
+        border: 3px solid #D0CECE;
+        width: 11.5%;
+        position: absolute;
+        width: 11.5%;
+        height: 2.5785%;
+        
+    }
+    .a {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        color: #000000;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 150%;
+    }
+    .child {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size:120%;
+    }
+    .ansdiv{
+        position: absolute;
+        height: 10%;
+        width: 12.5%;
+        background-color: #D4D4D4;
+        top: 65%;
+        border-radius: 10px;
+        border: 2px solid #ffffff;
+        
+    }
+    .ansdiv :hover{
+        background-color: #d4d4d4dc;
+    }
+    div {
+    cursor: pointer;
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;  
+    }
+    .ansa{
+        position: absolute;
+        left:50%;top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 100%;
+        font-family: Yu Gothic;
+        font-weight: bold ;
+        
+    }
+    .greendiv{
+        position: absolute;
+        height: 10%;
+        width: 12.5%;
+        background-color: #D4D4D4;
+        top: 65%;
+        border-radius: 10px;
+        border: 2px solid #52f05fe8;  
+    }
+    .reddiv{
+        position: absolute;
+        height: 10%;
+        width: 12.5%;
+        background-color: #D4D4D4;
+        top: 65%;
+        border-radius: 10px;
+        border: 2px solid #ee4040e8; 
+    }
+    .clickedansdiv{
+        
+        position: absolute;
+        height: 10%;
+        width: 12.5%;
+        background-color: #D4D4D4;
+        top: 65%;
+        border-radius: 10px;
+        border: 2px solid #52a4f0e8;
+    }
+    .matchdiv{
+        position: absolute;
+        background-color: #D9D9D9;
+        border-radius: 10px;
+        border: 2px solid #7F7F7F;
+        width: 20%;
+        height: 10%;
+    }
+    .clickedmatchdiv{
+        position: absolute;
+        background-color: #D9D9D9;
+        border-radius: 10px;
+        border: 2px solid #52a4f0e8;
+        width: 20%;
+        height: 10%;
+    }
+    .greenmatchdiv{
+        position: absolute;
+        background-color: #D9D9D9;
+        border-radius: 10px;
+        border: 2px solid #52f05fe8;
+        width: 20%;
+        height: 10%;
+    }
+    .redmatchdiv{
+        position: absolute;
+        background-color: #D9D9D9;
+        border-radius: 10px;
+        border: 2px solid #ee4040e8;
+        width: 20%;
+        height: 10%;
+    }
+</style>
+<div onclick="hiraganaStatus()" id="Hiraganabutton" style="position: absolute; top: 1.75%; left: 36.5%;width: 22.74%;height: 10%;background-color: #00B0F0;border-radius: 15px;border :3px solid #9BEBFB;box-sizing: border-box;">
+    <a style="position: absolute; top: 50%;left: 50%;transform: translate(-50%, -50%); color: #ffffff;font-size: large;font-family: Arial, Helvetica, sans-serif;">Hiragana</a>
+</div>
+
+<div onclick="katakanaStatus()" id="Katakanabutton" style="position: absolute; top: 1.75%; right: 18%;width: 22.74%;height: 10%;background-color: #00B0F0;border-radius: 15px;border :3px solid #9BEBFB;box-sizing: border-box;">
+    <a style="position: absolute; top: 50%;left: 50%;transform: translate(-50%, -50%); color: #ffffff;font-size: large;font-family: Arial, Helvetica, sans-serif;">Katakana</a>
+</div>
+
+<div onclick="getmutiplechoice()" id="multiplechoicebutton" style="position: absolute; top: 18.5%; left: 38.85%;width: 18.2%;height: 6.15%;background-color: #00B0F0;border-radius: 15px;">
+    <a style="position: absolute; top: 50%;left: 50%;transform: translate(-50%, -50%); color: #ffffff;font-size: large;font-family: Arial, Helvetica, sans-serif;">multiple choice</a>
+</div>
+
+<div onclick="getmatch()" id="QnAbutton" style="position: absolute; top: 18.5%; right: 20.27%;width: 18.2%;height: 6.15%;background-color: #00B0F0;border-radius: 15px;">
+    <a style="position: absolute; top: 50%;left: 50%;transform: translate(-50%, -50%); color: #ffffff;font-size: large;font-family: Arial, Helvetica, sans-serif;">match</a>
+</div>
+
+
+<div id="interface" style="position: absolute;top: 30%;left: 18.5%;width: 81.5%;">
+
+</div>
+<div id="filler" style="position: absolute;left: 18.5%;width: 81.5%;height: 5%;white-space: nowrap;"  ></div>
+<script src="../static/characters.js">
+</script>
+
+{% endblock %}
+

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}
+JAPANIZZ
+{% endblock %}
+
+{% block learn_button %}selected-navbar-button{% endblock %}
+
+{% block content %}
+{% load static %}
+<a href="../login" style="position: fixed; width: 46%; height: 10%; top: 5%;left: 27%;"><div  style="position: fixed; width: 46%; height: 10%; top: 5%;left: 27%; border-radius: 20px; background-color: #00B0F0;">
+<img src="{% static 'account_circle.svg' %}" style="position: absolute; top: 10%; left: 3.5%; max-height: 80%;">
+<a href="../login" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); color: #ffffff; font-size: 1.75vw; font-family: Arial, Helvetica, sans-serif; text-decoration: none;">
+    Login/create account
+</a>
+</div></a>
+<a href="../login" style="position: fixed; width: 44%; height: 65%; top: 22%; left: 28%; "><div  style="position: fixed; width: 44%; height: 65%; top: 22%; left: 28%; border-radius: 40px; background-color: #D9D9D9;" >
+<a href="../login" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); color: #0D0D0D; font-size: 1.75vw; font-family: Arial, Helvetica, sans-serif; text-decoration: none; white-space: nowrap;">
+    LOGIN TO USE THIS CONTENT
+</a>
+</div></a>
+<a href="#" style="position: fixed; width: 18.7%; height: 32.6%; top: 14.7%; left: 78.3%;">
+    <div style="position: fixed; width: 18.7%; height: 32.6%; top: 14.7%; left: 78.3%; border-radius: 20px; border: #A6A6A6; border-width: 2px; border-style: solid;">
+
+    </div>
+</a>
+<a href="#" style="position: fixed; width: 18.7%; height: 54.5%; top: 14.7%; left: 78.3%;">
+    <div style="position: fixed; width: 18.7%; height: 32.6%; top: 54.5%; left: 78.3%; border-radius: 20px; border: #A6A6A6; border-width: 2px; border-style: solid;">
+
+    </div>
+</a>
+
+{% endblock %}
